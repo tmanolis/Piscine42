@@ -1,0 +1,6 @@
+Credentials cache: API:DF375C59-88C4-402D-9857-D1CE8C6759CD
+        Principal: tmanolis@42.FR
+
+  Issued                Expires               Principal
+Feb  2 09:14:34 2021  Feb  9 09:14:34 2021  krbtgt/42.FR@42.FR
+Feb  2 09:14:35 2021  Feb  9 09:14:34 2021  HTTP/student-storage-2.42.fr@42.FR
