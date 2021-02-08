@@ -36,18 +36,21 @@ int	main(void)
 {
 	int a;
 	int b;
+	int div;
+	int mod;
 
 	a = 13;
 	b = 5;
+
 	ft_putnbr(a);
 	ft_putchar(' ');
 	ft_putnbr(b);
 	ft_putchar(',');
 	ft_putchar('\n');
-	ft_div_mod(a, b, &a, &b);
-	ft_putnbr(a);
+	ft_div_mod(a, b, &div, &mod);
+	ft_putnbr(div);
 	ft_putchar(' ');
-	ft_putnbr(b);
+	ft_putnbr(mod);
 	return (0);
 	
 }
