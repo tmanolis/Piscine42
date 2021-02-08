@@ -10,7 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int nb)
+{
+	if (nb >= 0 && nb < 10)
+	{
+		ft_putchar(nb + '0');
+	}
+
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(nb * -1);
+	}
+
+	else if (nb > 0)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+
+}
 
 void ft_swap(int *a, int *b);
 
@@ -22,6 +48,8 @@ int		main (void)
 	a = 10;
 	b = 20;
 	ft_swap(&a, &b);
-	printf("%d","%d", a, b);
+	ft_putnbr(a);
+	ft_putchar('\n');
+	ft_putnbr(b);
 	return (0);	
 }
