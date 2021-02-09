@@ -6,7 +6,7 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 14:39:24 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/07 16:53:14 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/09 10:23:00 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,14 @@ void	ft_putnbr(int nb)
 	{
 		ft_putchar(nb + '0');
 	}
-
 	else if (nb < 0)
 	{
 		ft_putchar('-');
 		ft_putnbr(nb * -1);
 	}
-
 	else if (nb > 0)
 	{
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);
 	}
-
 }
