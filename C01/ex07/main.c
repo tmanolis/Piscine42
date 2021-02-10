@@ -18,9 +18,14 @@ int		main(void)
 {
 
 	int size;
-	int tab[5] = {1, 2, 3, 4, 5};
+	int tab[5];
 	int p;
 
+	tab[0] = 10;
+	tab[1] = 2;
+	tab[2] = 30;
+	tab[3] = 4;
+	tab[4] = 5;
 	size = 5;
 	p = 0;
 	while (p < size)
