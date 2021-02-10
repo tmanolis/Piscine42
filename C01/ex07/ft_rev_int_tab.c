@@ -19,8 +19,8 @@ void	ft_rev_int_tab(int *tab, int size)
 	while (tab[i] < size / 2)
 	{
 		cache = tab[i];
-		tab[i] = tab[size] - 1 - i;
-		tab[size] - 1 - i = cache;
+		tab[i] = tab[size - 1 - i];
+		tab[size - 1 - i] = cache;
 		i++;
 	}
 
