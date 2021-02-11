@@ -10,15 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+char	 *ft_strncpy(char *dest, char *src, unsigned int n)
 {
-
-	//utilise strlen
 	unsigned int i;
 
 	i = 0;
 
-	while (i < n && src[i] != '\0') //utilise strlen pour lui dire ou s'arreter
+	while (i < n && src[i] != '\0')
 		{
 			dest[i] = src[i];
 			i++;
