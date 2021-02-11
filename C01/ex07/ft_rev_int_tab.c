@@ -6,7 +6,7 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 13:06:54 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/10 17:21:59 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/11 09:24:40 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,4 @@ void	ft_rev_int_tab(int *tab, int size)
 		tab[size - 1 - i] = cache;
 		i++;
 	}
-
 }
