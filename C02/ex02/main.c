@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/12 15:29:27 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/12 16:27:46 by tmanolis         ###   ########.fr       */
+/*   Created: 2021/02/12 15:29:37 by tmanolis          #+#    #+#             */
+/*   Updated: 2021/02/12 16:29:56 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
+#include <stdio.h>
+
+int ft_str_is_alpha(char *str);
+
+int	main(void)
 {
-	int i;
-	
-	i = 0;	
-	while (str[i] != '\0')
-	{
-		if (str[i] < 65 || (str[i] > 90 && str[i] < 97) || str[i] > 122)
-		{
-			return (0);
-		}
-	i++;	
-	}
-	return (1);
+	printf("%d", ft_str_is_alpha(""));
+	return (0);
 }
