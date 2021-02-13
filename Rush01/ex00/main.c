@@ -1,26 +1,5 @@
 #include <unistd.h>
-
-#define A [map[0][0], map[0][1], map[0][2], map[0][3]]
-#define B [map[1][0], map[1][1], map[1][2], map[1][3]]
-#define C [map[2][0], map[2][1], map[2][2], map[2][3]]
-#define D [map[3][0], map[3][1], map[3][2], map[3][3]]
-
-#define E [map[0][3], map[0][2], map[0][1], map[0][0]]
-#define F [map[1][3], map[1][2], map[1][1], map[1][0]]
-#define G [map[2][3], map[2][2], map[2][1], map[2][0]]
-#define H [map[3][3], map[3][2], map[3][1], map[3][0]]
-
-
-#define I [map[0][0], map[1][0], map[2][0], map[3][0]]
-#define J [map[0][1], map[1][1], map[2][1], map[3][1]]
-#define K [map[0][2], map[1][2], map[2][2], map[3][2]]
-#define L [map[0][3], map[1][3], map[2][3], map[3][3]]
-
-#define M [map[3][0], map[2][0], map[1][0], map[0][0]]
-#define N [map[3][1], map[2][1], map[1][1], map[0][1]]
-#define O [map[3][2], map[2][2], map[1][2], map[0][2]]
-#define P [map[3][3], map[2][3], map[1][3], map[0][3]]
-
+#include <stdlib.h>
 
 int	ft_strlen(char *str)
 {
@@ -38,9 +17,9 @@ int	params_valid(int argc, char *argv[])
 {
 	if (argc != 2)
 		return (0);
-	else if (!(argv[1] == ' ' || (argv[1] > 48 && argv[1] < 53)))
-		return (0);
-	else if (ft_strlen(argv[1]) =! 31)
+	// else if (!(argv[1] == ' ' || (argv[1] > 48 && argv[1] < 53)))
+		// return (0);
+	else if (ft_strlen(argv[1]) != 31)
 		return (0);
 	else
 		return (1);
@@ -49,7 +28,9 @@ int	params_valid(int argc, char *argv[])
 int	*get_params(char *str)
 {
 	int i;
-	int contour[16];
+	int *contour;
+
+	contour = (int *) malloc(16);
 
 	while (str[i] != '\0')
 	{
@@ -80,20 +61,37 @@ int	verify_line(int header, int *line)
 		}
 		i++;
 	}
-	if ((count_building == header) && (line[0] + line[1] + line[2] + line[3] == 10)
+	if ((count_building == header) && (line[0] + line[1] + line[2] + line[3] == 10))
 		return (1);
 	else
 		return (0);
 }
 
-int	map_valid(int *contour, int **map)
+int	map_valid(int* contour, int map[4][4])
 {
-	if (verify_line(contour[0], A) + verify_line(contour[1], B) + verify_line(contour[2], C) 
-	+ verify_line(contour[3], D) + verify_line(contour[4], E) + verify_line(contour[5], F) 
-	+ verify_line(contour[6], G) + verify_line(contour[7], H) + verify_line(contour[8], I) 
-	+ verify_line(contour[9], J) + verify_line(contour[10], K) + verify_line(contour[11], L) 
-	+ verify_line(contour[12], M) + verify_line(contour[13], N) + verify_line(contour[14], O) 
-	+ verify_line(contour[15], P) == 16)
+	int arr[4] = {map[0][0], map[0][1], map[0][2], map[0][3]};
+	int brr[4] = {map[1][0], map[1][1], map[1][2], map[1][3]};
+	int crr[4] = {map[2][0], map[2][1], map[2][2], map[2][3]};
+	int drr[4] = {map[3][0], map[3][1], map[3][2], map[3][3]};
+	int err[4] = {map[0][3], map[0][2], map[0][1], map[0][0]};
+	int frr[4] = {map[1][3], map[1][2], map[1][1], map[1][0]};
+	int grr[4] = {map[2][3], map[2][2], map[2][1], map[2][0]};
+	int hrr[4] = {map[3][3], map[3][2], map[3][1], map[3][0]};
+	int irr[4] = {map[0][0], map[1][0], map[2][0], map[3][0]};
+	int jrr[4] = {map[0][1], map[1][1], map[2][1], map[3][1]};
+	int krr[4] = {map[0][2], map[1][2], map[2][2], map[3][2]};
+	int lrr[4] = {map[0][3], map[1][3], map[2][3], map[3][3]};
+	int mrr[4] = {map[3][0], map[2][0], map[1][0], map[0][0]};
+	int nrr[4] = {map[3][1], map[2][1], map[1][1], map[0][1]};
+	int orr[4] = {map[3][2], map[2][2], map[1][2], map[0][2]};
+	int prr[4] = {map[3][3], map[2][3], map[1][3], map[0][3]};
+
+	if (verify_line(contour[0], arr) + verify_line(contour[1], brr) + verify_line(contour[2], crr) 
+	+ verify_line(contour[3], drr) + verify_line(contour[4], err) + verify_line(contour[5], frr) 
+	+ verify_line(contour[6], grr) + verify_line(contour[7], hrr) + verify_line(contour[8], irr) 
+	+ verify_line(contour[9], jrr) + verify_line(contour[10], krr) + verify_line(contour[11], lrr) 
+	+ verify_line(contour[12], mrr) + verify_line(contour[13], nrr) + verify_line(contour[14], orr) 
+	+ verify_line(contour[15], prr) == 16)
 	{
 		return (1);
 	}
@@ -110,8 +108,14 @@ int	main(int argc, char *argv[])
 	}
 	
 	int *contour = get_params(argv[1]);
+	int fakemap[4][4] = {
+		{1, 2, 3, 4},
+		{2, 3, 4, 1},
+		{3, 4, 1, 2},
+		{4, 1, 2, 3}
+	};
 
-	if (!(map_valid(contour, map)))
+	if (!(map_valid(contour, fakemap)))
 	{
 		write(1, "error", 5);
 		return (1);
