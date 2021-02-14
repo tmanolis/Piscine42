@@ -10,21 +10,21 @@ int 	ft_strlen(char *src)
 	return (i);
 }
 
+
 int	ft_strcmp(char *s1,char *s2)
 {
 	int i;
 	int j;
-	int k;
 
-	i = -1;
-	j = 0;
-	k = 1;
-
-	
-	if (ft_strlen(s1) < ft_strlen(s2))
-		return (i);
-	else if (ft_strlen(s1) == ft_strlen(s2))
-		return (j);
-	else
-		return (k); 
+	i = 0;
+	while (s1[i] == s2[i])
+	{
+		i++;
+	}
+	if (i == ft_strlen(s2))
+		return (0);
+	else if (s1[i] != s2[i])
+	{
+		j = s1[i] - s2[i]	
+	}
 }
