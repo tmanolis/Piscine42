@@ -17,14 +17,16 @@ int	ft_strcmp(char *s1,char *s2)
 	int j;
 
 	i = 0;
-	while (s1[i] == s2[i])
+
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
 	{
 		i++;
 	}
-	if (i == ft_strlen(s2))
+	if (i == ft_strlen(s1))
 		return (0);
 	else if (s1[i] != s2[i])
 	{
-		j = s1[i] - s2[i]	
+		j = s1[i] - s2[i];	
 	}
+	return (j);
 }
