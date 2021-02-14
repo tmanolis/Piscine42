@@ -6,11 +6,11 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:00:13 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/12 17:16:15 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/13 12:09:57 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_lowercase(char *str)
+int	ft_str_is_lowercase(char *str)
 {
 	int i;
 

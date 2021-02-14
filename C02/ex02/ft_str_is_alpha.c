@@ -6,22 +6,22 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 15:29:27 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/12 16:27:46 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/13 12:05:34 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_alpha(char *str)
 {
 	int i;
-	
-	i = 0;	
+
+	i = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] < 65 || (str[i] > 90 && str[i] < 97) || str[i] > 122)
 		{
 			return (0);
 		}
-	i++;	
+		i++;
 	}
 	return (1);
 }

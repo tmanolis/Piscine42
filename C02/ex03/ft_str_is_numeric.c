@@ -6,11 +6,11 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 16:42:14 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/12 16:49:43 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/13 12:09:02 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_numeric(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	int i;
 
