@@ -6,7 +6,7 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 12:14:13 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/14 10:36:47 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/15 11:41:39 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ char	*ft_strcapitalize(char *str)
 		{
 			str[i] = str[i] - 32;
 		}
-		else if ((str[i - 1] < 65 || (str[i - 1] > 90 && str[i - 1] < 97)
+		else if ((str[i - 1] < 48 || (str[i - 1] > 57 && str[i - 1] < 65) 
+				|| (str[i - 1] > 90 && str[i - 1] < 97)
 				|| str[i - 1] > 122)
 				&& (str[i] > 96 && str[i] < 123))
 		{
