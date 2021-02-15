@@ -6,21 +6,9 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 09:45:25 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/15 09:46:41 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/15 09:53:25 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_strlen(char *src)
-{
-	int i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 int	ft_strcmp(char *s1, char *s2)
 {
