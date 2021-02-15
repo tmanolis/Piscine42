@@ -1,4 +1,16 @@
-int 	ft_strlen(char *src)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/15 09:45:25 by tmanolis          #+#    #+#             */
+/*   Updated: 2021/02/15 09:46:41 by tmanolis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_strlen(char *src)
 {
 	int i;
 
@@ -10,23 +22,17 @@ int 	ft_strlen(char *src)
 	return (i);
 }
 
-
-int	ft_strcmp(char *s1,char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int i;
-	int j;
 
 	i = 0;
-
 	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
 	{
 		i++;
 	}
-	if (i == ft_strlen(s1))
+	if (s1[i] == s2[i])
 		return (0);
-	else if (s1[i] != s2[i])
-	{
-		j = s1[i] - s2[i];	
-	}
-	return (j);
+	else
+		return (s1[i] - s2[i]);
 }
