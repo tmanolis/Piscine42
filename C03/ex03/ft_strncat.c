@@ -6,7 +6,7 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 13:22:45 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/15 14:38:13 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/15 15:50:52 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,21 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char *ft_strcat(char *dest, char *src)
+char *ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int i;
-	int j;
+	unsigned int i;
+	unsigned int j;
 
 	i = ft_strlen(dest);
 	j = 0;
-	while (src[j] != '\0')
+	while (j < nb)
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
-	dest[i] = '\0';
+	if (nb != 0)
+		dest[i] = '\0';
 	return (dest);
 }
+
