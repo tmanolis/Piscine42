@@ -38,7 +38,7 @@ char	*ft_strcapitalize(char *str)
 		{
 			str[i] = str[i] - 32;
 		}
-		else if ((str[i - 1] < 48 || (str[i - 1] > 57 && str[i - 1] < 65) 
+		else if ((str[i - 1] < 48 || (str[i - 1] > 57 && str[i - 1] < 65)
 				|| (str[i - 1] > 90 && str[i - 1] < 97)
 				|| str[i - 1] > 122)
 				&& (str[i] > 96 && str[i] < 123))
