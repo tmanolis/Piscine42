@@ -6,11 +6,11 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 13:22:45 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/15 14:38:13 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/16 11:28:19 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int i;
 
@@ -22,7 +22,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int i;
 	int j;
