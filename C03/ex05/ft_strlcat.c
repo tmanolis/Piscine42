@@ -6,7 +6,7 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 13:01:16 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/16 13:02:17 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/16 17:15:34 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,11 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 	i = ft_strlen(dest);
 	j = 0;
-	cache = ft_strlen(dest);
-	if (dest[0] == '\0' || size == 0)
+	cache = ft_strlen(dest) + ft_strlen(src);
+	if (size == 0)
 		return (ft_strlen(src));
+	else if (size <= strlen(src))
+		return (size + strlen(src));
 	while (src[j] != '\0' && j < size)
 	{
 		dest[i] = src[j];
@@ -40,13 +42,5 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		j++;
 	}
 	dest[i] = '\0';
-	i = 0;
-	while (src[i] != '\0')
-	{
-		i++;
-	}
-	if (size < cache)
-		return (cache - (cache - size) + i);
-	else
-		return (cache + i);
+	return (cache);
 }
