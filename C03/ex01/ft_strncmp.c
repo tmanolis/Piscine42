@@ -6,7 +6,7 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 09:48:53 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/15 16:35:53 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/16 10:42:58 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (s1[i] == s2[i] && i < n - 1)
+	while (s1[i] == s2[i] && i < n - 1 && (s1[i] != '\0' || s2[i] != '\0'))
 	{
 		i++;
 	}
