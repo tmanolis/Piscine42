@@ -6,7 +6,7 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 13:22:45 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/15 15:50:52 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/16 10:20:19 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
 		i++;
 		j++;
 	}
-	if (nb != 0)
-		dest[i] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 
