@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int				ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
 	int i;
 
@@ -33,8 +33,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	cache = ft_strlen(dest) + ft_strlen(src);
 	if (size == 0)
 		return (ft_strlen(src));
-	else if (size <= strlen(dest))
-		return (size + strlen(src));
+	else if (size <= ft_strlen(dest))
+		return (size + ft_strlen(src));
 	while (src[j] != '\0' && j < size)
 	{
 		dest[i] = src[j];
