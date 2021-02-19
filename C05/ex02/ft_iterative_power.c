@@ -9,6 +9,8 @@ int ft_iterative_power(int nb,int power)
 		return (0);
 	else if (power == 0)
 		return (1);
+	else if(power == 1)
+		return (nb);
 	else if (nb > 14 && power > 7)
 		return (0);
 	while (i < power)
