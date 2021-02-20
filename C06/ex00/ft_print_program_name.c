@@ -6,7 +6,7 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 10:06:05 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/20 10:32:14 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/20 14:35:17 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,12 @@ void	ft_putstr(char *str)
 	}
 }
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	if (argc != 0)
+	{
 		ft_putstr(argv[0]);
+		write(1, "\n", 1);
+	}
 	return (0);
 }
