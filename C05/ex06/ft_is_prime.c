@@ -6,7 +6,7 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 11:04:47 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/21 17:01:47 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/22 09:48:14 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_is_prime(int nb)
 		return (1);
 	else if (nb % 2 == 0)
 		return (0);
-	while (i * i < nb && i < 46341)
+	while (i * i <= nb && i < 46341)
 	{
 		if (nb % i == 0)
 			return (0);
