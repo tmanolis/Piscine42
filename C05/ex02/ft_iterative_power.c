@@ -1,4 +1,16 @@
-int ft_iterative_power(int nb,int power)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/22 10:17:30 by tmanolis          #+#    #+#             */
+/*   Updated: 2021/02/22 10:22:07 by tmanolis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_iterative_power(int nb, int power)
 {
 	int i;
 	int valeur;
@@ -9,10 +21,8 @@ int ft_iterative_power(int nb,int power)
 		return (0);
 	else if (power == 0)
 		return (1);
-	else if(power == 1)
+	else if (power == 1)
 		return (nb);
-	else if (nb > 14 && power > 7)
-		return (0);
 	while (i < power)
 	{
 		valeur = valeur * nb;
