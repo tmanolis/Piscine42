@@ -14,20 +14,16 @@ int	ft_is_prime(int nb)
 	int i;
 
 	i = 2;
-	if (nb < 2 || (nb % 2 == 0))
-	{
-		ft_putstr("la");
+	if (nb < 2)
 		return (0);
-	}
 	else if (nb == 2)
 		return (1);
-	while (i * i < nb && i < 46341)
+	else if (nb % 2 == 0)
+		return (0);
+	while (i * i <= nb && i < 46341)
 	{
 		if (nb % i == 0)
-		{
-			ft_putstr("ici");
 			return (0);
-		}
 		i++;
 	}
 	return (1);
