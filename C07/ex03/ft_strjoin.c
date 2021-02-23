@@ -6,13 +6,13 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 09:18:33 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/23 13:53:27 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/23 14:18:58 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int i;
 
@@ -22,7 +22,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	ft_size_arrays(int size, char **strs, char *sep)
+int		ft_size_arrays(int size, char **strs, char *sep)
 {
 	int i;
 	int j;
@@ -38,7 +38,7 @@ int	ft_size_arrays(int size, char **strs, char *sep)
 	return (j);
 }
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int i;
 	int j;
@@ -55,17 +55,17 @@ char *ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-char *ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int i;
-	int len;
-	char *tab;
+	int		i;
+	int		len;
+	char	*tab;
 
 	if (size == 0)
 	{
 		tab = malloc(sizeof(*tab));
-			*tab = 0;
-			return (tab);
+		*tab = 0;
+		return (tab);
 	}
 	len = ft_size_arrays(size, strs, sep);
 	if (!(tab = malloc(sizeof(*tab) * len)))
@@ -75,9 +75,9 @@ char *ft_strjoin(int size, char **strs, char *sep)
 	while (i < size)
 	{
 		ft_strcat(tab, strs[i]);
-		if (i < size -1)
+		if (i < size - 1)
 			ft_strcat(tab, sep);
-		i++;	
+		i++;
 	}
 	tab[len - 1] = '\0';
 	return (tab);
