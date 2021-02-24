@@ -6,7 +6,7 @@
 /*   By: tmanolis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 13:52:44 by tmanolis          #+#    #+#             */
-/*   Updated: 2021/02/24 15:33:21 by tmanolis         ###   ########.fr       */
+/*   Updated: 2021/02/24 15:40:38 by tmanolis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char				*ft_strdup(char *src)
 	return (dest);
 }
 
-struct	s_stock_str	 *ft_strs_to_tab(int ac, char **av)
+struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	int			i;
 	t_stock_str	*tab;
